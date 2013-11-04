@@ -8,6 +8,7 @@ class WebSocketRails.WebSocketConnection
         console.log "WARNING: Using connection urls with protocol specified is depricated"
     else if window.location.protocol == 'https:'
         @url             = "wss://#{@url}"
+        console.log @url
     else
         @url             = "ws://#{@url}"
     
@@ -16,6 +17,7 @@ class WebSocketRails.WebSocketConnection
     @_conn.onmessage = @on_message
     @_conn.onclose   = @on_close
     @_conn.onerror   = @on_error
+    console.log @url
 
   trigger: (event) =>
     if @dispatcher.state != 'connected'
