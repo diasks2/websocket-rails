@@ -29,7 +29,6 @@ class WebSocketRails.HttpConnection
     @_conn.addEventListener("load", @connectionClosed, false)
     @_conn.open "GET", @_url, true
     @_conn.send()
-    console.log 'HTTP Interface for the WebSocketRails client.'
 
   parse_stream: =>
     if @_conn.readyState == 3
