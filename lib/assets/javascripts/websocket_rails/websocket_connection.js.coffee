@@ -8,7 +8,7 @@ class WebSocketRails.WebSocketConnection
         console.log "WARNING: Using connection urls with protocol specified is depricated"
     else if window.location.protocol == 'https:'
         @url             = "wss://#{@url}"
-        console.log @url
+        console.log "SSL URL: " + @url
     else
         @url             = "ws://#{@url}"
     
