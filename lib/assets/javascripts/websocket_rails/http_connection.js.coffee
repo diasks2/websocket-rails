@@ -21,7 +21,7 @@ class WebSocketRails.HttpConnection
     xmlhttp
 
   constructor: (url, @dispatcher) ->
-    @_url          = "http://#{url}"
+    @_url          = "https://#{url}"
     @_conn         = @createXMLHttpObject()
     @last_pos      = 0
     @message_queue = []
